@@ -9,18 +9,30 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/users")
 public class UserController {
     @Autowired
     private UserRepository userRepository;
-    @GetMapping
+    @GetMapping("user")
     public List<User> listarUsuarios() throws ResourceNotFoundException {
         return userRepository.findAll();
-
     }
 
-    @PostMapping
-    public User guardarUser(@RequestBody User user){
-       return userRepository.save(user);
+    @PostMapping("crear")
+    public User guardarUser(@RequestParam String name, @RequestParam String email,  @RequestParam String password) throws ResourceNotFoundException{
+        return userRepository.save(new User(email, name, password));
+    }
+
+    String name ;
+    @RequestMapping("/submit")
+    public String submit(@RequestBody String user) {
+        this.name = name;
+        // Procesa la entrada
+        return "/success";
+    }
+
+    @RequestMapping("/success")
+    public String success() {
+        // Muestra un mensaje de éxito
+        return "El nombre es: " + name;
     }
 }
