@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1> Hello World </h1>
+    <p> Esta Funcionando wow</p>
+    <form action="/crear" method="post">
+        <input type="text" name="name"><br>
+        <input type="text" name="email"><br>
+        <input type="text" name="password"><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+        let url = "http://localhost:5000/user"
+        fetch(url)
+            .then(Response => Response.json())
+            .then(data => MostrarData (data))
+            .catch(Error => Console.log(Error))
+        const MostrarData = (data) => {
+            console.log(data)
+        }
+    </script>
+</body>
+</html>
