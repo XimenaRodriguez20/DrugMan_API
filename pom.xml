@@ -15,7 +15,7 @@
 	<name>Drug-Man</name>
 	<description>Multiplayer Drug-Man project for Spring Boot</description>
 	<properties>
-  		<sonar.organization>mpulidom</sonar.organization>
+  		<sonar.organization>ximenarodriguez20</sonar.organization>
   		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<java.version>17</java.version>
 	</properties>
