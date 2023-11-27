@@ -59,7 +59,7 @@ jobs:
           cache: maven
 
       - name: Test with Maven
-        run: mvn test -Dtest='!com.game.drugman.DrugMan_APITest' jacoco:report -P coverage
+        run: mvn test -Dtest='!com.game.drugman.DrugMan_APITest#contextLoads' jacoco:report -P coverage
 
       - name: Analyze with SonarCloud
         env:

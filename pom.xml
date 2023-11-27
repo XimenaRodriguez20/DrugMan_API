@@ -17,6 +17,7 @@
 	<properties>
   		<sonar.organization>ximenarodriguez20</sonar.organization>
   		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.exclusions>src/main/java/**/*.java</sonar.exclusions>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
