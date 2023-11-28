@@ -12,7 +12,7 @@ public class UserTest {
     public User nuevoUsuario ;
 
     @BeforeEach
-    public void setUp() throws Exception {
+    public void setUp() {
         nuevoUsuarioVacio = new User();
         nuevoUsuario = new User("jordy@gmail.com",  "Jordy", "123456");
     }
