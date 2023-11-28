@@ -1,5 +1,0 @@
-com\game\drugman\DrugManApplication.class
-com\game\drugman\repository\UserRepository.class
-com\game\drugman\model\User.class
-com\game\drugman\Controller\UserController.class
-com\game\drugman\exception\ResourceNotFoundException.class

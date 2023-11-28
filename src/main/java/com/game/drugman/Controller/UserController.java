@@ -4,6 +4,8 @@ import com.game.drugman.exception.ResourceNotFoundException;
 import com.game.drugman.model.User;
 import com.game.drugman.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,7 +19,7 @@ public class UserController {
         return userRepository.findAll();
     }
 
-    @PostMapping("crear")
+    @PostMapping("/crear")
     public User guardarUser(@RequestParam String name, @RequestParam String email,  @RequestParam String password) throws ResourceNotFoundException{
         return userRepository.save(new User(email, name, password));
     }
