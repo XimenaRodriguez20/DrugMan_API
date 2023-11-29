@@ -14,7 +14,7 @@ public class UserTest {
     @BeforeEach
     public void setUp() {
         nuevoUsuarioVacio = new User();
-        nuevoUsuario = new User("jordy@gmail.com",  "Jordy", "123456");
+        nuevoUsuario = new User("jordy@gmail.com",  "Jordy", 123456);
     }
 
     @Test
@@ -38,7 +38,7 @@ public class UserTest {
     @Test
     public void getPasswordUsuarioContenido (){
         String password = "123456";
-        assertEquals(nuevoUsuario.getPassword(), password);
+        assertEquals(nuevoUsuario.getPoints(), password);
     }
 
     @Test
@@ -57,9 +57,9 @@ public class UserTest {
 
     @Test
     public void setPasswordUsuarioContenido (){
-        String password = "654321";
-        nuevoUsuario.setPassword(password);
-        assertEquals(nuevoUsuario.getPassword(), password);
+        int password = 654321;
+        nuevoUsuario.setPoints(password);
+        assertEquals(nuevoUsuario.getPoints(), password);
     }
 
 }
