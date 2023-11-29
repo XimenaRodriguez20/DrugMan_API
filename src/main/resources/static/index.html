@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pac-Man Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@5.0.0/bundles/stomp.umd.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <!-- Botón para enviar coordenadas -->
+    <label for="xCoordinate">X Coordinate:</label>
+    <input type="text" id="xCoordinate" />
+    <br />
+    <label for="yCoordinate">Y Coordinate:</label>
+    <input type="text" id="yCoordinate" />
+    <br />
+    <button onclick="sendCoordinates()">Enviar Coordenadas</button>
+    <button onclick="connect()">Conectar</button>
+
+
+    <div class="container">
+        <div id="mensajes" class="container">
+            <ul id="ULMensajes" class="list-group"></ul>
+        </div>
+        <div id="cuerpo" class="container">
+            <input id="txtCorreo" type="text" class="form-control" placeholder="Correo">
+            <input id="txtNombre" type="text" class="form-control" placeholder="Nombre">
+            <input id="txtMensaje" type="number" class="form-control" placeholder="Mensaje">
+            <button id="btnEnviar" class="btn btn-primary">Enviar</button>
+            <div id="miElementoDeTexto">Este es un texto predeterminado.</div>
+        </div>
+    </div>
+    <p></p>
+</body>
+</html>
