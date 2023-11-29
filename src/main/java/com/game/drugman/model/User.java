@@ -16,16 +16,16 @@ public class User {
     private String email;
     @Column(name = "name")
     private String name;
-    @Column(name = "password")
-    private String password;
+    @Column(name = "points")
+    private Integer points;
 
     public User() {
     }
 
-    public User(String email, String name, String password) {
+    public User(String email, String name, Integer points) {
         this.email = email;
         this.name = name;
-        this.password = password;
+        this.points = points;
     }
 
     public String getEmail() {
@@ -44,12 +44,12 @@ public class User {
         this.name = name;
     }
 
-    public String getPassword() {
-        return password;
+    public Integer getPoints() {
+        return points;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPoints(int points) {
+        this.points = points;
     }
 
     @Override
@@ -57,7 +57,7 @@ public class User {
         return "User{" +
                 "email='" + email + '\'' +
                 ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
+                ", points='" + points + '\'' +
                 '}';
     }
 
@@ -66,11 +66,11 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(email, user.email) && Objects.equals(name, user.name) && Objects.equals(password, user.password);
+        return Objects.equals(email, user.email) && Objects.equals(name, user.name) && Objects.equals(points, user.points);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(email, name, password);
+        return Objects.hash(email, name, points);
     }
 }

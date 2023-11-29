@@ -1,0 +1,65 @@
+package com.game.drugman;
+
+import com.game.drugman.model.User;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class UserTest {
+
+    public User nuevoUsuarioVacio ;
+    public User nuevoUsuario ;
+
+    @BeforeEach
+    public void setUp() {
+        nuevoUsuarioVacio = new User();
+        nuevoUsuario = new User("jordy@gmail.com",  "Jordy", 123456);
+    }
+
+    @Test
+    public void crearUser (){
+        assertEquals(nuevoUsuarioVacio.getClass(),User.class);
+    }
+
+
+    @Test
+    public void getEmailUsuarioContenido (){
+        String email = "jordy@gmail.com";
+        assertEquals(nuevoUsuario.getEmail(), email);
+    }
+
+    @Test
+    public void getNameUsuarioContenido (){
+        String name = "Jordy";
+        assertEquals(nuevoUsuario.getName(), name);
+    }
+
+    @Test
+    public void getPasswordUsuarioContenido (){
+        int points = 123456;
+        assertEquals(nuevoUsuario.getPoints(), points);
+    }
+
+    @Test
+    public void setEmailUsuarioContenido (){
+        String email = "santiago@gmail.com";
+        nuevoUsuario.setEmail(email);
+        assertEquals(nuevoUsuario.getEmail(), email);
+    }
+
+    @Test
+    public void setNameUsuarioContenido (){
+        String name = "Santiago";
+        nuevoUsuario.setName(name);
+        assertEquals(nuevoUsuario.getName(), name);
+    }
+
+    @Test
+    public void setPasswordUsuarioContenido (){
+        int password = 654321;
+        nuevoUsuario.setPoints(password);
+        assertEquals(nuevoUsuario.getPoints(), password);
+    }
+
+}
