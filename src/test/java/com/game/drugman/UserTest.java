@@ -37,8 +37,8 @@ public class UserTest {
 
     @Test
     public void getPasswordUsuarioContenido (){
-        String password = "123456";
-        assertEquals(nuevoUsuario.getPoints(), password);
+        int points = 123456;
+        assertEquals(nuevoUsuario.getPoints(), points);
     }
 
     @Test
