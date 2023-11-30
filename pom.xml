@@ -17,7 +17,6 @@
 	<properties>
   		<sonar.organization>ximenarodriguez20</sonar.organization>
   		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-		<sonar.exclusions>src/main/java/**/*.java</sonar.exclusions>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
@@ -54,6 +53,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-websocket</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.jacoco</groupId>
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<version>0.8.8</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -62,41 +66,27 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.8</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
-	<profiles>
-		<profile>
-			<id>coverage</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.jacoco</groupId>
-						<artifactId>jacoco-maven-plugin</artifactId>
-						<version>0.8.7</version>
-						<executions>
-							<execution>
-								<id>prepare-agent</id>
-								<goals>
-									<goal>prepare-agent</goal>
-								</goals>
-							</execution>
-							<execution>
-								<id>report</id>
-								<goals>
-									<goal>report</goal>
-								</goals>
-								<configuration>
-									<formats>
-										<format>XML</format>
-									</formats>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
 	<repositories>
 		<repository>
 			<id>spring-milestones</id>
@@ -133,6 +123,9 @@
 			</releases>
 		</pluginRepository>
 	</pluginRepositories>
+
+
+
 
 
 </project>
