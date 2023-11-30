@@ -72,7 +72,7 @@ jobs:
           -Dsonar.projectKey=XimenaRodriguez20_DrugMan_API
           -Dsonar.java.coverage.reportPaths=target/site/jacoco-aggregate/jacoco.xml
           -Dsonar.sources=src/
-          -Dsonar.test.exclusions=src/test/**
+          -Dsonar.test.exclusions=src/test/java/com/game/drugman/*,src/main/resources/static/*
           -Dsonar.tests=src/test/
           -Dsonar.verbose=true
 
