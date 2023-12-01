@@ -62,7 +62,7 @@ jobs:
         run: mvn test -Dtest='!com.game.drugman.DrugMan_APITest#contextLoads' jacoco:report -P coverage
       - name: Listar Cobertura
         run: | 
-          ls target/site/jacoco-aggregate
+          tree target
           cat target/site/jacoco-aggregate/jacoco.xml
 
       - name: Analyze with SonarCloud
