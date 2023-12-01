@@ -70,7 +70,7 @@ jobs:
           -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.organization=ximenarodriguez20
           -Dsonar.projectKey=XimenaRodriguez20_DrugMan_API
-          -Dsonar.java.coverage.reportPaths=target/site/jacoco-aggregate/jacoco.xml
+          -Dsonar.java.coverage.reportPaths=target/site/jacoco/jacoco.xml
           -Dsonar.sources=src/
           -Dsonar.test.exclusions=src/test/**
           -Dsonar.tests=src/test/
