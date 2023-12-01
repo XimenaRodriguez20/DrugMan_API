@@ -16,7 +16,7 @@ const onWebSocketClose = () => {
 const conectarWS = () => {
     onWebSocketClose();
     stompCliente = new StompJs.Client({
-        webSocketFactory: () => new WebSocket('https://drugman-backend.azurewebsites.net/pacman-websocket')
+        webSocketFactory: () => new WebSocket('ws://localhost:5000/pacman-websocket')
     });
     stompCliente.onConnect = onConnectSocket;
     stompCliente.onWebSocketClose = onWebSocketClose;

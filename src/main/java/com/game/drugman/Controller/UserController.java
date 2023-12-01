@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
 
-import javax.xml.crypto.Data;
 import java.util.List;
 
 @RestController
@@ -25,6 +24,9 @@ public class UserController {
 
     @Autowired
     private UserRepository userRepository;
+
+
+
     @GetMapping("user")
     public List<User> listarUsuarios() throws ResourceNotFoundException {
         return userRepository.findAll();
@@ -43,17 +45,5 @@ public class UserController {
         return userRepository.save(user);
     }
 
-    String name ;
-    @RequestMapping("/submit")
-    public String submit(@RequestBody String user) {
-        this.name = name;
-        // Procesa la entrada
-        return "/success";
-    }
 
-    @RequestMapping("/success")
-    public String success() {
-        // Muestra un mensaje de éxito
-        return "El nombre es: " + name;
-    }
 }

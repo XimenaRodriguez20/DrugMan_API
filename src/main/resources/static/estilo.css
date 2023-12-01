@@ -1,0 +1,112 @@
+body {
+  font-family:'Press Start 2P', sans-serif;
+  margin: 40px;
+  padding: 10px;
+  background: url("https://i.pinimg.com/originals/bb/d8/5f/bbd85fa86d8dc8e3fc64d086f6641a5c.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+link {
+  rel: icon;
+  href: logo.png;
+  width: 100px;
+  height: 100px;
+}
+
+.coordenadas {
+   background-color: rgba(0, 0, 0, 0.8);
+   padding: 20px;
+   border: 1px solid #fff;
+   color: #fff;
+   max-width: 600px;
+   margin: auto;
+   border-radius: 9px;
+
+}
+
+.coordenadas label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+   margin: auto;
+}
+
+.coordenadas input {
+    width: 90%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: #000;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.coordenadas button {
+   padding: 5px 10px;
+  background-image: linear-gradient(to bottom, #d2691e, #8b2500);
+  opacity: 0.9;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cuerpo {
+  padding: 15px;
+}
+
+.cuerpo .container {
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+    margin: 0 auto;
+}
+
+.cuerpo #mensajes {
+  width: 60%;
+  float: right;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border: 1px solid #ccc;
+  color: #000;
+  border-radius: 9px;
+}
+
+.cuerpo #mensajes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cuerpo #mensajes li {
+  margin-bottom: 5px;
+  padding: 10px;
+  color: #fff;
+}
+
+.cuerpo #cuerpo {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border: 1px solid #ccc;
+  color: #fff;
+  border-radius: 9px;
+}
+
+#btnEnviar {
+  width: 60px;
+  height: 30px;
+  background-image: linear-gradient(to bottom, #d2691e, #8b2500);
+  opacity: 0.9;
+  border-radius: 10px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+.cuerpo input {
+  margin-bottom: 10px;
+  background-color: #f2f2f2;
+  color: #000;
+}
