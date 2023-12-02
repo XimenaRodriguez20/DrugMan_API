@@ -16,7 +16,7 @@ const onWebSocketClose = () => {
 const conectarWS = () => {
     onWebSocketClose();
     stompCliente = new StompJs.Client({
-        webSocketFactory: () => new WebSocket('https://drugman-backend.azurewebsites.net/pacman-websocket')
+        webSocketFactory: () => new WebSocket('wss://drugman-backend.azurewebsites.net/pacman-websocket')
     });
     stompCliente.onConnect = onConnectSocket;
     stompCliente.onWebSocketClose = onWebSocketClose;
@@ -54,9 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const pedirMensajes = () => {
+    console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaa');
     const xhr = new XMLHttpRequest();
     // Establecer el método HTTP de la solicitud
-    xhr.open("GET", "http://localhost:5000/user");
+    xhr.open("GET", "https://drugman-backend.azurewebsites.net/user");
+    console.log(xhr.open("GET", "https://drugman-backend.azurewebsites.net/user"));
     // Enviar la solicitud
     xhr.send();
     // Recibir la respuesta
@@ -65,6 +67,7 @@ const pedirMensajes = () => {
         const response = xhr.responseText;
         // Interpretar la respuesta como un array de strings
         var mensajeJSON = JSON.parse(response);
+        console.log(mensajeJSON);
         var claves = Object.keys(mensajeJSON);
         // Mostrar los elementos
         var jugar;
