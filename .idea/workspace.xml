@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7355b3e-05ba-4f89-a7c2-86f647e01ac3" name="Changes" comment="despliegue">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/game/drugman/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/game/drugman/Controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/game/drugman/DrugManApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/game/drugman/DrugManApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/game/drugman/exception/ResourceNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/game/drugman/exception/ResourceNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/game/drugman/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/game/drugman/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/game/drugman/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/game/drugman/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/game/drugman/socket/PacmanWebSocketController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/game/drugman/socket/PacmanWebSocketController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/game/drugman/socket/WebSocketConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/game/drugman/socket/WebSocketConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +88,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701472319553</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="despliegue">
+      <created>1701474490499</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701474490499</updated>
+    </task>
+    <task id="LOCAL-00003" summary="despliegue">
+      <created>1701474545626</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701474545626</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
