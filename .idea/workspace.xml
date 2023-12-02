@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7355b3e-05ba-4f89-a7c2-86f647e01ac3" name="Changes" comment="Fin fix 001">
+    <list default="true" id="a7355b3e-05ba-4f89-a7c2-86f647e01ac3" name="Changes" comment="Fin fix 002">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/drugman/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/drugman/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/game/drugman/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/game/drugman/Controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/estilo.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/estilo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/game/drugman/UserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/game/drugman/UserTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +64,7 @@
       <recent name="C:\Users\julia\Videos\DrugMan_API\src\main\resources\static" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.UserTest.falseEquals">
     <configuration name="DrugManApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.game.drugman.DrugManApplication" />
       <module name="drug-man" />
@@ -75,6 +74,22 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.falseEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="drug-man" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.game.drugman.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.game.drugman" />
+      <option name="MAIN_CLASS_NAME" value="com.game.drugman.UserTest" />
+      <option name="METHOD_NAME" value="falseEquals" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -94,6 +109,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserTest.falseEquals" />
         <item itemvalue="Application.DrugManApplication" />
       </list>
     </recent_temporary>
@@ -156,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701520886906</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fin fix 002">
+      <created>1701521468809</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701521468809</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -164,6 +187,7 @@
     <MESSAGE value="despliegue" />
     <MESSAGE value="Fin" />
     <MESSAGE value="Fin fix 001" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fin fix 001" />
+    <MESSAGE value="Fin fix 002" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fin fix 002" />
   </component>
 </project>
