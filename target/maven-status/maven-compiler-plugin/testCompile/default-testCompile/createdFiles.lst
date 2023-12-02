@@ -1,2 +1,3 @@
 com\game\drugman\DrugMan_APITest.class
+com\game\drugman\socket\PacmanWebSocketControllerTest.class
 com\game\drugman\UserTest.class

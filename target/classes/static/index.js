@@ -4,6 +4,9 @@ const onConnectSocket = () => {
     stompCliente.subscribe('/tema/pacman', (mensaje) => {
         mostrarMensaje(mensaje.body);
     });
+    stompCliente.subscribe('/tema/chat', (mensaje) => {
+            mostrarMensajeChat(mensaje.body);
+        });
     pedirMensajes();
 };
 
@@ -28,11 +31,9 @@ const enviarMensaje = () => {
     let txtMensaje = document.getElementById('txtMensaje');
 
     stompCliente.publish({
-        destination: '/app/move',
+        destination: '/app/chat',
         body: JSON.stringify({
-            email: txtCorreo.value,
-            name: txtNombre.value,
-            points: txtMensaje.value
+            body: txtMensaje.value
         })
     });
 };
@@ -42,6 +43,17 @@ const mostrarMensaje = (mensaje) => {
      console.log(body);
     listar(body.name, body.points);
 
+};
+
+const mostrarMensajeChat = (mensaje) => {
+    const body = JSON.parse(mensaje);
+     console.log(body.body);
+    const myUlch = document.querySelector("#ULCuerpo");
+    const mensajeLIch = document.createElement('li');  // Crea el elemento que se mostrara en pantalla
+    mensajeLIch.classList.add('list-group-item');
+    const fechaActual = new Date();
+    mensajeLIch.innerHTML = `<strong>${fechaActual.toLocaleTimeString()}</strong>: ${body.body}`;
+    ULCuerpo.appendChild(mensajeLIch);
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -54,11 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const pedirMensajes = () => {
-    console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaa');
     const xhr = new XMLHttpRequest();
     // Establecer el método HTTP de la solicitud
     xhr.open("GET", "https://drugman-backend.azurewebsites.net/user");
-    console.log(xhr.open("GET", "https://drugman-backend.azurewebsites.net/user"));
     // Enviar la solicitud
     xhr.send();
     // Recibir la respuesta
@@ -67,7 +77,6 @@ const pedirMensajes = () => {
         const response = xhr.responseText;
         // Interpretar la respuesta como un array de strings
         var mensajeJSON = JSON.parse(response);
-        console.log(mensajeJSON);
         var claves = Object.keys(mensajeJSON);
         // Mostrar los elementos
         var jugar;

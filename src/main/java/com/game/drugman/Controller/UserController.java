@@ -41,8 +41,9 @@ public class UserController {
     }
 
     @PostMapping("/crear")
-    public User guardarUser(@RequestBody User user) throws ResourceNotFoundException{
-        return userRepository.save(user);
+    public User guardarUser(@RequestBody String datos) throws ResourceNotFoundException{
+        User jugador = new User(datos.split("/")[0], datos.split("/")[1], (int) Double.parseDouble(datos.split("/")[2]));
+        return userRepository.save(jugador);
     }
 
 

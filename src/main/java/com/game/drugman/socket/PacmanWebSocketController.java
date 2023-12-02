@@ -25,10 +25,9 @@ public class PacmanWebSocketController {
         return player;
     }
 
-    @MessageMapping("/historia")
-    @SendTo("/tema/historia")
-    public HashMap handleHistoria() {
-        System.out.println("---Historial " + ranquinList.toString());
-        return ranquinList;
+    @MessageMapping("/chat")
+    @SendTo("/tema/chat")
+    public String handleHistoria(String message) {
+        return message;
     }
 }

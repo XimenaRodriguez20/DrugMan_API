@@ -14,40 +14,14 @@ link {
   height: 100px;
 }
 
-.coordenadas {
-   background-color: rgba(0, 0, 0, 0.8);
+.LogoDrugman {
+   background-image: url('drugmanBlanco.png');
    padding: 20px;
-   border: 1px solid #fff;
    color: #fff;
-   max-width: 600px;
+   max-width: 530px;
+   height: 85px;
    margin: auto;
    border-radius: 9px;
-
-}
-
-.coordenadas label {
-  display: block;
-  margin-bottom: 5px;
-  color: #fff;
-   margin: auto;
-}
-
-.coordenadas input {
-    width: 90%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    background-color: #000;
-    color: #fff;
-    margin: 0 auto;
-}
-
-.coordenadas button {
-   padding: 5px 10px;
-  background-image: linear-gradient(to bottom, #d2691e, #8b2500);
-  opacity: 0.9;
-  border-radius: 10px;
-  color: #fff;
-  cursor: pointer;
 }
 
 .cuerpo {
@@ -62,13 +36,16 @@ link {
 }
 
 .cuerpo #mensajes {
-  width: 60%;
+  width: 500px;
+  height: 300px;
   float: right;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
   border: 1px solid #ccc;
   color: #000;
   border-radius: 9px;
+  overflow-y: scroll;
+  overflow-y-scrollbar-track-color: #000;
 }
 
 .cuerpo #mensajes ul {
@@ -86,24 +63,55 @@ link {
 .cuerpo #cuerpo {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 500px;
+  height: 300px;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
   border: 1px solid #ccc;
   color: #fff;
-  border-radius: 9px;
+  border-radius: 10px;
+  overflow-y: scroll;
+  overflow-y-scrollbar-track-color: #000;
 }
 
-#btnEnviar {
+.chat #btnEnviar {
   width: 60px;
   height: 30px;
-  background-image: linear-gradient(to bottom, #d2691e, #8b2500);
+  background-color: #d2691e;
   opacity: 0.9;
   border-radius: 10px;
   font-size: 16px;
   color: white;
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out
+}
+
+
+#btnEnviar:hover {
+  background-color: #8b2500;
+}
+
+.chat{
+  display: flex;
+  position: relative;
+  left: 200px;
+  max-width: 350px;
+  height: 20px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 10);
+  padding: 20px;
+  border: 1px solid #ccc;
+  color: #fff;
+  border-radius: 5px;
+
+}
+input#txtMensaje {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 .cuerpo input {
   margin-bottom: 10px;
