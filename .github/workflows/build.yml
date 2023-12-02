@@ -75,6 +75,7 @@ jobs:
           -Dsonar.organization=ximenarodriguez20
           -Dsonar.projectKey=XimenaRodriguez20_DrugMan_API
           -Dsonar.java.coverage.reportPaths=target/site/jacoco/jacoco.xml
+          -Dsonar.cobertura.minimumProjectCoverage=30.0
           -Dsonar.sources=src/
           -Dsonar.test.exclusions=src/test/java/com/game/drugman/**
           -Dsonar.tests=src/test/
