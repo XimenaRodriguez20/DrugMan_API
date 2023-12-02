@@ -3,23 +3,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pac-Man Game</title>
+    <title>DrugMan Ranking</title>
     <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@5.0.0/bundles/stomp.umd.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="estilo.css"/>
     <link rel="icon" href="logo.png"/>
 </head>
 <body>
-<!-- Botón para enviar coordenadas -->
-<section class="coordenadas">
-    <label for="xCoordinate">X Coordinate:</label>
-    <input type="text" id="xCoordinate" />
-    <br />
-    <label for="yCoordinate">Y Coordinate:</label>
-    <input type="text" id="yCoordinate" />
-    <br />
-    <button onclick="sendCoordinates()">Enviar Coordenadas</button>
-    <button onclick="connect()">Conectar</button>
+
+<section class="LogoDrugman">
 </section>
 
 <section class="cuerpo">
@@ -27,13 +19,14 @@
         <div id="mensajes" class="container">
             <ul id="ULMensajes" class="list-group"></ul>
         </div>
+
         <div id="cuerpo" class="container">
-            <input id="txtCorreo" type="text" class="form-control" placeholder="Correo">
-            <input id="txtNombre" type="text" class="form-control" placeholder="Nombre">
-            <input id="txtMensaje" type="number" class="form-control" placeholder="Mensaje">
-            <button id="btnEnviar" class="btn btn-primary">Enviar</button>
-            <div id="miElementoDeTexto">Este es un texto predeterminado.</div>
+            <!-- Aca donde se muestre lo que han escrito-->
         </div>
+    </div>
+    <div  class="chat">
+    <input id="txtMensaje" type="text" class="form-control" placeholder="Mensaje">
+    <button id="btnEnviar" class="btn btn-primary">Enviar</button>
     </div>
 </section>
 <p></p>
