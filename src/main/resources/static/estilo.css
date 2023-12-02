@@ -7,12 +7,6 @@ body {
   background-size: cover;
   color: #fff;
 }
-link {
-  rel: icon;
-  href: logo.png;
-  width: 100px;
-  height: 100px;
-}
 
 .LogoDrugman {
    background-image: url('drugmanBlanco.png');
@@ -45,7 +39,6 @@ link {
   color: #000;
   border-radius: 9px;
   overflow-y: scroll;
-  overflow-y-scrollbar-track-color: #000;
 }
 
 .cuerpo #mensajes ul {
@@ -72,7 +65,6 @@ link {
   color: #fff;
   border-radius: 10px;
   overflow-y: scroll;
-  overflow-y-scrollbar-track-color: #000;
 }
 
 .chat #btnEnviar {

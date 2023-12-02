@@ -19,7 +19,7 @@ const onWebSocketClose = () => {
 const conectarWS = () => {
     onWebSocketClose();
     stompCliente = new StompJs.Client({
-        webSocketFactory: () => new WebSocket('wss://drugman-backend.azurewebsites.net/pacman-websocket')
+        webSocketFactory: () => new WebSocket('ws:localhost:80/pacman-websocket')
     });
     stompCliente.onConnect = onConnectSocket;
     stompCliente.onWebSocketClose = onWebSocketClose;
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const pedirMensajes = () => {
     const xhr = new XMLHttpRequest();
     // Establecer el método HTTP de la solicitud
-    xhr.open("GET", "https://drugman-backend.azurewebsites.net/user");
+    xhr.open("GET", "http://localhost/user");
     // Enviar la solicitud
     xhr.send();
     // Recibir la respuesta
